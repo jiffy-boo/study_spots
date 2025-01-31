@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Spot Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Spot Finder</h1>
+        <div id="Map" class="tabcontent">
+            <div id="map"></div>
+        </div>
+        <div id="List" class="tabcontent hidden">
+            <input type="text" id="filterInput" placeholder="Filter by name..." onkeyup="filterTable()">
+            <table id="spotTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Open Hours</th>
+                        <th>Food Offered</th>
+                        <th>Drinks Offered</th>
+                        <th>WiFi Available</th>
+                        <th>Noise Level</th>
+                        <th>Seating Quality</th>
+                    </tr>
+                </thead>
+                <tbody id="spotList"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Map')">Map View</button>
+        <button class="tablinks" onclick="openTab(event, 'List')">List View</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
